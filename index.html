@@ -1,0 +1,336 @@
+<link href="https://fonts.googleapis.com/css2?family=Sniglet&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+  html{
+    scroll-behavior: smooth; <!-- Makes links between sections scroll smoothly rather than instantly -->
+  }
+  
+  body{
+    margin: 0;
+    color: white;
+    text-shadow: 2px 2px 1px #1f1f1f;
+    font-family: "Sniglet";
+  }
+  #navbar{
+    background-color: #a10306;
+    position: fixed;
+    top: 0;
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: solid 0.1vh black;
+    <!-- Fixed navbar with links to the right -->
+  }
+  #navlink{
+    height: 100%;
+    display: flex;
+    width: 10vw;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 4vmin;
+  }
+  #navlink:hover{
+    background-color: #03a19e;
+    <!-- Background changes color when hovering -->
+  }
+
+  #welcome-section{
+    background-color: #03a19e;
+    height: 100vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10vmin;
+    margin-top: -10vmin;
+    padding-bottom: 10vmin;
+    <!-- Padding and margin offset the height of the navbar -->
+  }
+  .title{
+    font-size: 15vh;
+  }
+  #projects{
+    background-color: #a10306;
+    height: 90vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: -10vmin;
+    padding-top:10vmin;
+    font-size: 5vmin;
+  }
+  #project-title{
+    margin-top: -2vmin;
+    font-size: 8vmin;
+    margin-bottom: -1vmin;
+  }
+  #link-container{
+    display: flex;
+    justify-content: space-evenly;
+    <-- This container allows three products to be aligned in a row where otherwise the content is aligned in a column -->
+  }
+  #image-link{
+    font-size: 6vmin;
+    margin-bottom: 1vmin;
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+    width: 70vw;
+    border: solid 1vmin white;
+    border-radius: 1vmin;
+    animation-name: color-change-back;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+  }
+  #image-link:hover{
+    animation-name: color-change;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+  }
+  #images{
+    width: 50vmin;
+    height: auto;
+  }
+  #show-all{
+    animation-name: color-change-back;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    border: solid 0.5vh white;
+    color: white;
+    padding: 1vh;
+    text-decoration: none;
+  }
+  #show-all:hover{
+      animation-name: color-change;
+      animation-duration: 0.2s;
+      animation-iteration-count: 1;
+      animation-fill-mode: both;
+      animation-timing-function: linear;
+  }
+  #contact{
+    background-color: #03a19e;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  #contact-title{
+    font-size: 8vh;
+  }
+  #contact-description{
+    font-size: 5vh;
+  }
+  #social-links{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 2vw;
+    animation-name: slide-back;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+  }
+  #social-links:hover{
+    animation-name: slide;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+  }
+  
+  
+  @keyframes slide{ <!-- Animations for desktop transitions-->
+      0%{
+        margin-top: 0vmin;
+      }
+      100%{
+        margin-top: 5vmin;
+      }
+  }
+    @keyframes slide-back{
+      0%{
+        margin-top: 5vmin;
+      }
+      100%{
+        margin-top: 0vmin;
+      }
+  }
+    @keyframes slide-right{<!-- Animations for mobile transitions-->
+      0%{
+        margin-left: 0vmin;
+      }
+      100%{
+        margin-left: 5vmin;
+      }
+  }
+    @keyframes slide-right-back{
+      0%{
+        margin-left: 5vmin;
+      }
+      100%{
+        margin-left: 0vmin;
+      }
+  }
+   @keyframes color-change{ <!-- Animations for desktop color change-->
+      0%{
+        background-color: #a10306;
+      }
+      100%{
+        background-color: #03a19e;
+      }
+  }
+    @keyframes color-change-back{
+      0%{
+        background-color: #03a19e;
+      }
+      100%{
+        background-color: #a10306;
+      }
+  }
+  #social-line{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    height: 10vh;
+  }
+  .font-size{
+      font-size: 4vw;
+    }
+  
+  @media (max-width: 900px){
+    <!-- Content is changed in this section to be single-column for better mobile experience,
+    Animations are changed from up/down to left-right-->
+  #navbar{
+    font-size: 6vmin;
+    justify-content: space-around;
+  }
+  #navlink{
+    width: 100%;
+  }
+  #welcome-section{
+    text-align: center;
+  }
+  .title{
+    font-size: 15vmin;
+  }
+  #projects{
+    height: 220vmin;
+    margin-bottom: 10vmin;
+  }
+  #link-container{
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #image-link{
+    animation-name: slide-right-back;
+  }
+  #image-link:hover{
+      animation-name: slide-right;
+  }
+
+  #images{
+    width: 70vmin;
+  }
+  #show-all{
+    animation-name: slide-right-back;
+    padding: 1vmin;
+  }
+  #show-all:hover{
+      animation-name: slide-right;
+  }
+  #contact{
+    height: 100vmin;
+    padding-top: 10vmin;
+    margin-top: -10vmin;
+  }
+  #contact-title{
+    font-size: 8vmin;
+  }
+  #contact-description{
+    font-size: 5vmin;
+  }
+  #social-links{
+    font-size: 10vmin;
+    animation-name: slide-right-back;
+  }
+  #social-line{  
+    font-size: 30vmin;   
+    flex-direction: column;
+    align-items: flex-start;
+    height: 50vmin;
+  }
+    .font-size{
+      font-size: 10vmin;
+    }
+    #social-links:hover{
+      animation-name: slide-right;
+  }
+  }
+</style>
+
+<main>
+  
+  <nav id = "navbar">
+    <a id = "navlink" href = "#welcome-section">Welcome</a>
+    <a id = "navlink" href = "#projects">Projects</a>
+    <a id = "navlink" href = "#contact">Contact</a>
+  </nav>
+  
+  <section id = "welcome-section">
+    <h1 class = "title">Welcome to my portfolio</h1>
+  </section>
+  
+  <section id = "projects">
+    <h1 id = "project-title" class = "title">Projects</h1>
+    <p>The following links take you to website designs I have worked on</p>
+    
+    <div id = "link-container">
+      <div id = "image-link">
+        <label>Responsive Design test</label>
+        <a target = "blank" href = "https://codepen.io/Penguin123ab/full/PoPbqXR"><img id = "images" src = "https://screenshot.codepen.io/4375655.PoPbqXR.220bfa41-8506-4e8a-9b2f-dacf14d5ba1d.png"></a>
+      </div>
+      
+      <div id = "image-link">
+        <label>Technical documentation</label>
+        <a target = "blank" href = "https://codepen.io/Penguin123ab/full/qBORMqo"><img id = "images" src = https://screenshot.codepen.io/4375655.qBORMqo.1c0f7055-fb3f-42c3-bfba-6ee019e97bfa.png></a>
+      </div>
+      
+      <div id = "image-link">
+        <label>Product page</label>
+        <a target = "blank" href = "https://codepen.io/Penguin123ab/full/LYpROvJ"><img id = "images" src = "https://screenshot.codepen.io/4375655.LYpROvJ.bfadd218-db7c-4f77-8d61-ec81c4f5295f.png"></a>
+      </div>
+    </div>
+    <div>
+        <a id = "show-all" target = "blank" href = "https://codepen.io/Penguin123ab">Show all</a>
+    </div>
+  </section>
+  
+  <section id = "contact">
+    
+    <h1 id = "contact-title" class = "title">Contact</h1>
+    
+    <p id = "contact-description">Below are some fake links to my socials</p><br><br>
+    
+    <div id = "social-line"> <!-- fa font size is used to create popular logosfrom font awesome, check the stylesheet link at the top -->
+      <a id = "social-links" class = "font-size" href = "#contact"><i class="fa font-size">&#xf082;</i>&nbsp;&nbsp;Facebook</a>
+      <a id = "social-links" class = "font-size" href = "#contact"><i class="fa font-size">&#xf09b;</i>&nbsp;&nbsp;Github Jist</a>
+      <a id = "social-links" class = "font-size" href = "#contact"><i class="fa font-size">&#xf08c;</i>&nbsp;&nbsp;LinkedIn</a>
+      <a id = "social-links" class = "font-size" href = "#contact"><i class="fa font-size">&#xf081;</i>&nbsp;&nbsp;Twitter</a>
+    </div>
+    
+  </section>
+</main>
