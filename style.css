@@ -1,0 +1,278 @@
+html{
+  scroll-behavior: smooth; <!-- Makes links between sections scroll smoothly rather than instantly -->
+}
+
+body{
+  margin: 0;
+  color: white;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  font-family: "Sniglet";
+}
+#navbar{
+  background-color: #a10306;
+  position: fixed;
+  top: 0;
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: solid 0.1vh black;
+  <!-- Fixed navbar with links to the right -->
+}
+#navlink{
+  height: 100%;
+  display: flex;
+  width: 10vw;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-size: 4vmin;
+}
+#navlink:hover{
+  background-color: #03a19e;
+  <!-- Background changes color when hovering -->
+}
+
+#welcome-section{
+  background-color: #03a19e;
+  height: 100vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10vmin;
+  margin-top: -10vmin;
+  padding-bottom: 10vmin;
+  <!-- Padding and margin offset the height of the navbar -->
+}
+.title{
+  font-size: 15vh;
+}
+#projects{
+  background-color: #a10306;
+  height: 90vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: -10vmin;
+  padding-top:10vmin;
+  font-size: 5vmin;
+}
+#project-title{
+  margin-top: -2vmin;
+  font-size: 8vmin;
+  margin-bottom: -1vmin;
+}
+#link-container{
+  display: flex;
+  justify-content: space-evenly;
+  <-- This container allows three products to be aligned in a row where otherwise the content is aligned in a column -->
+}
+#image-link{
+  font-size: 3vmin;
+  margin-bottom: 1vmin;
+  display: flex;
+  flex-direction: column;
+  padding: 3px;
+  width: 70vw;
+  border: solid 1vmin white;
+  border-radius: 1vmin;
+  animation-name: color-change-back;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+#image-link:hover{
+  animation-name: color-change;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+#images{
+  width: auto;
+  height: 30vmin;
+}
+#show-all{
+  animation-name: color-change-back;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  border: solid 0.5vh white;
+  color: white;
+  padding: 1vh;
+  text-decoration: none;
+}
+#show-all:hover{
+    animation-name: color-change;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+}
+#contact{
+  background-color: #03a19e;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+#contact-title{
+  font-size: 8vh;
+}
+#contact-description{
+  font-size: 5vh;
+}
+#social-links{
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 2vw;
+  animation-name: slide-back;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+#social-links:hover{
+  animation-name: slide;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+
+@keyframes slide{ <!-- Animations for desktop transitions-->
+    0%{
+      margin-top: 0vmin;
+    }
+    100%{
+      margin-top: 5vmin;
+    }
+}
+  @keyframes slide-back{
+    0%{
+      margin-top: 5vmin;
+    }
+    100%{
+      margin-top: 0vmin;
+    }
+}
+  @keyframes slide-right{<!-- Animations for mobile transitions-->
+    0%{
+      margin-left: 0vmin;
+    }
+    100%{
+      margin-left: 5vmin;
+    }
+}
+  @keyframes slide-right-back{
+    0%{
+      margin-left: 5vmin;
+    }
+    100%{
+      margin-left: 0vmin;
+    }
+}
+ @keyframes color-change{ <!-- Animations for desktop color change-->
+    0%{
+      background-color: #a10306;
+    }
+    100%{
+      background-color: #03a19e;
+    }
+}
+  @keyframes color-change-back{
+    0%{
+      background-color: #03a19e;
+    }
+    100%{
+      background-color: #a10306;
+    }
+}
+#social-line{
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  height: 10vh;
+}
+.font-size{
+    font-size: 4vw;
+  }
+
+@media (max-width: 900px){
+  <!-- Content is changed in this section to be single-column for better mobile experience,
+  Animations are changed from up/down to left-right-->
+#navbar{
+  font-size: 6vmin;
+  justify-content: space-around;
+}
+#navlink{
+  width: 100%;
+}
+#welcome-section{
+  text-align: center;
+}
+.title{
+  font-size: 15vmin;
+}
+#projects{
+  height: 220vmin;
+  margin-bottom: 10vmin;
+}
+#link-container{
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#image-link{
+  animation-name: slide-right-back;
+}
+#image-link:hover{
+    animation-name: slide-right;
+}
+
+#images{
+  width: 70vmin;
+}
+#show-all{
+  animation-name: slide-right-back;
+  padding: 1vmin;
+}
+#show-all:hover{
+    animation-name: slide-right;
+}
+#contact{
+  height: 100vmin;
+  padding-top: 10vmin;
+  margin-top: -10vmin;
+}
+#contact-title{
+  font-size: 8vmin;
+}
+#contact-description{
+  font-size: 5vmin;
+}
+#social-links{
+  font-size: 10vmin;
+  animation-name: slide-right-back;
+}
+#social-line{
+  font-size: 30vmin;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 50vmin;
+}
+  .font-size{
+    font-size: 10vmin;
+  }
+  #social-links:hover{
+    animation-name: slide-right;
+}
+}
